@@ -1,11 +1,16 @@
 # To Be A Programmer
 
+程序员应该掌握的技能
+
 ## 基础学科
 
 * 离散数学
 * 概率论与统计
 * 线性代数
-* 英语
+
+机器学习,推荐算法等都是对数学知识的应用.同时算法分析和设计本身就需要数学理论证明.越往深处挖掘,越会发现计算机跟数学的联系非常紧密.
+
+* 英语 : 虽然越来越多的技术文档官方会提供中文版,但是更多时候还是只有原版文档文档可以阅读.并且很多技术的论文不存在中文版的.
 
 ### 推荐书籍
 
@@ -19,18 +24,18 @@
 ## 计算机体系
 
 * 编码
-  * 整数 : 原码 反码 补码(为什么需要补码)
-  * 浮点数 : 精度和范围的冲突 浮点数小数精度导致误差 魔数计算1/sqrt
+  * 整数 : 原码 反码 补码(为什么需要补码?加法器实现减法)
+  * 浮点数 : IEEE 754
   * 字符 : ASCII Unicode(UTF-8 UTF-16 UTF-32)
-* CPU ：指令执行 流水线  SMP NUMA MPP 缓存 (WriteThought)
+* CPU ：指令流水线执行 ,SMP NUMA MPP ,缓存(WriteThought 一致性)
 * 存储器 : 分层  物理内存(虚拟内存) 硬盘
-* 网络 : 网络分层 网络协议 TCP/IP HTTP (RFC)
+* 网络 : 网络分层 ,网络协议 ,TCP/IP ,HTTP (RFC)
 
 ### 推荐书籍
 
 * [x] [深入理解计算机系统](https://book.douban.com/subject/1896753/)
 * [x] [TCP-IP详解卷](https://book.douban.com/series/12438)
-* [ ] [计算机程序设计艺术](https://book.douban.com/series/46236)
+* [ ] [计算机程序设计艺术](https://book.douban.com/series/46236) : 计算机学科的圣经
 
 ### 推荐文章
 
@@ -54,9 +59,9 @@
 * [ ] [UNIX 编程艺术](https://book.douban.com/subject/11609943/)
 * [ ] [UNIX 网络编程](https://book.douban.com/subject/1500149/)  [Vol2](https://book.douban.com/subject/4118577/)
 * [ ] [Linux 系统编程](https://book.douban.com/subject/25828773/)
-* [ ] [UNIX环境高级编程](https://book.douban.com/subject/25900403/)
-* [ ] [Windows 核心编程](https://book.douban.com/subject/3235659/)
-* [ ] [程序员的自我修养](https://book.douban.com/subject/3652388/)
+* [ ] [UNIX 环境高级编程](https://book.douban.com/subject/25900403/) 
+* [ ] [Windows 核心编程](https://book.douban.com/subject/3235659/) : Windows Via C/C++
+* [ ] [程序员的自我修养](https://book.douban.com/subject/3652388/) : 关于程序链接的知识
 
 ### 推荐文章
 
@@ -90,7 +95,6 @@
 
 * [ ] [SQL Server2012实施与管理实战指南](https://book.douban.com/subject/21823753/)
 * [ ] [数据库系统概念](https://book.douban.com/subject/10548379/)
-
 
 ## 软件架构
 
@@ -135,8 +139,9 @@
 * nosql : redis elasticsearch mongodb
 * mq : kafka
 * Actor : orleans akka
-* io framework : netty
+* netty
 * nginx
+* rpc : dubbo
 
 ## 编程语言
 
