@@ -127,7 +127,7 @@
 	* [ ] [Zap](https://cwiki.apache.org/confluence/display/ZOOKEEPER/Zab+vs.+Paxos) : Zookeeper的一致性协议
 	* [ ] [Vector Clock](https://riak.com/posts/technical/vector-clocks-revisited)
 	* [ ] [Gossip](https://www.cs.cornell.edu/home/rvr/papers/flowgossip.pdf)
-	* [ ] [一致性哈希算法]
+	* [ ] [一致性哈希算法]()
   * 分布式数据库
     * [ ] [Spanner](http://static.googleusercontent.com/media/research.google.com/zh-CN//archive/spanner-osdi2012.pdf) : CockroachDB TiDB 的理论依据
 	* [ ] [AWS Aurora](https://www.allthingsdistributed.com/files/p1041-verbitski.pdf) : AWS Aurora
@@ -185,7 +185,7 @@
 * netty
 * nginx
 * 分布式 :dubbo zipkin zookeeper skywalking Zuul Service Mesh Consul
-* 容错系统 [Hystrix] https://github.com/Netflix/Hystrix
+* 容错系统 [Hystrix](https://github.com/Netflix/Hystrix)
 
 ## 编程范式
 
