@@ -99,6 +99,7 @@
   * MicroService 
     * [ ] [MicroServices Resource Guide by Martin Fowler](https://martinfowler.com/microservices/)
 	* [ ] [MicroServices by Martin Fowler](https://martinfowler.com/articles/microservices.html)
+	* [ ] [微服务架构](http://dockone.io/article/3687)
   * 分布式系统理论  
     * [ ] [CAP Wiki](https://en.wikipedia.org/wiki/CAP_theorem)
     * [ ] [Fallacies of Distributed Computing @Wiki](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) [Pdf](http://www.rgoarchitects.com/Files/fallacies.pdf):  分布式系统中的错误假设
@@ -116,7 +117,7 @@
     * 两段提交
 	* 三段提交
 	* 一致性算法 : Paxos
-    * [ ] [事务补偿](https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction)
+    * [ ] [事务补偿](https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction) : TCC 
 	* 最终一致性
   * 分布式锁 : 数据库 redis zookeeper 实现分布式锁 
   * 乐观锁(CAS) 
@@ -131,6 +132,7 @@
     * [ ] [Spanner](http://static.googleusercontent.com/media/research.google.com/zh-CN//archive/spanner-osdi2012.pdf) : CockroachDB TiDB 的理论依据
 	* [ ] [AWS Aurora](https://www.allthingsdistributed.com/files/p1041-verbitski.pdf) : AWS Aurora
   * 康威定律
+  * [ ] [Azure 云设计模式](https://docs.microsoft.com/zh-cn/azure/architecture/patterns/)
 * 分布式架构设计模式
   * 高性能
     * 缓存 : (分布式)缓存如何分区和查找 失效/更新(WriteThough),分布式服务意味着 单点缓存/分布式缓存 缓存要设置过期时间 预防爬虫
