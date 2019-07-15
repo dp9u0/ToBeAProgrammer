@@ -66,19 +66,6 @@
 * [ ] [计算机程序的构造和解释](https://book.douban.com/subject/1148282/)
 * [ ] [编译原理](https://book.douban.com/subject/3296317/)
 
-## 编程范式
-
-* 算法
-* 数据结构 : 线程安全 & LockFree 数据结构
-* 面向对象 面向过程
-* 异步 : APM TAP EAP Promise Observer
-* Actor
-* Reactive
-
-### 推荐阅读
-
-* [x] [算法导论](https://book.douban.com/subject/20432061/)
-
 ## 数据存储
 
 * sql
@@ -124,13 +111,15 @@
 	* [ ] [Principles of Distributed System](https://disco.ethz.ch/courses/podc_allstars/lecture/podc.pdf) : Books 分布式系统中会用到的算法
 	* [ ] [数据密集型应用系统设计](https://book.douban.com/subject/30329536/) : Books
   * ACID BASE
+  * 一致性 : 强一致性 顺序一致性 弱一致性
   * 分布式事务 
     * 两段提交
 	* 三段提交
 	* 一致性算法 : Paxos
     * [ ] [事务补偿](https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction)
 	* 最终一致性
-  * 分布式锁/乐观锁(CAS)
+  * 分布式锁 : 数据库 redis zookeeper 实现分布式锁 
+  * 乐观锁(CAS) 
   * 共识/一致性算法 Paxos Raft Zap
     * [ ] [Paxos](http://harry.me/blog/2014/12/27/neat-algorithms-paxos/)
 	* [ ] [RAFT](https://www.infoq.cn/article/raft-paper/)
@@ -196,6 +185,21 @@
 * 分布式 :dubbo zipkin zookeeper skywalking Zuul Service Mesh Consul
 * 容错系统 [Hystrix] https://github.com/Netflix/Hystrix
 
+## 编程范式
+
+* 算法
+* 数据结构 : 线程安全 & LockFree 数据结构
+* 面向对象 
+  * [ ] [A Theory of Objects](https://book.douban.com/subject/1761931/) 
+* 面向过程
+* 异步 : APM TAP EAP Promise Observer
+* Actor
+* Reactive
+
+### 推荐阅读
+
+* [x] [算法导论](https://book.douban.com/subject/20432061/)
+
 ## 编程语言
 
 ### Java
@@ -205,6 +209,22 @@
 ### .NET
 
 * [x] [CLR Via C#](https://book.douban.com/subject/4924165/)
+* [ ] [ECMA 335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) : CLI
+* [ ] [The Book of the Runtime](https://github.com/dotnet/coreclr/tree/master/Documentation/botr) : CLR
+* [ ] [design and implementation of generics](https://www.microsoft.com/en-us/research/wp-content/uploads/2001/01/designandimplementationofgenerics.pdf)
+
+* Collection
+* Threading
+  * [ ] [there is no thread](https://blog.stephencleary.com/2013/11/there-is-no-thread.html)
+* Task
+* Native Call
+* 内存管理
+  * [x] [Memory-Usage-Inside-the-CLR](https://mattwarren.org/2017/07/10/Memory-Usage-Inside-the-CLR/)
+  * [x] [learning-how-garbage-collectors-work-part](https://mattwarren.org/2016/02/04/learning-how-garbage-collectors-work-part-1)
+  * [ ] [Drill Into .NET Framework Internals to See How the CLR Creates Runtime Objects](https://web.archive.org/web/20080919091745/)
+  * [ ] [Back to basic: Series on dynamic memory management](https://blogs.msdn.microsoft.com/abhinaba/2009/01/25/back-to-basic-series-on-dynamic-memory-management/)
+* GC
+* JIT
 
 ### C/C++
 
@@ -217,14 +237,6 @@
 ### js/nodejs
 
 * [x] [You Don't Know JS](https://book.douban.com/subject/25883834/)
-
-### 虚拟机
-
-* Metadata
-* Type System
-* JIT
-* 内存管理
-* Call Native Code
 
 ### 工具类
 
