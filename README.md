@@ -69,7 +69,7 @@
 ## 编程范式
 
 * 算法
-* 数据结构 : 线程安全&LockFree 数据结构
+* 数据结构 : 线程安全 & LockFree 数据结构
 * 面向对象 面向过程
 * 异步 : APM TAP EAP Promise Observer
 * Actor
@@ -106,8 +106,8 @@
 ## 系统架构
 
 * 原则 : 合适(Keep Simple) 演化
-* 分布式架构复杂度 : 统一标准 调用链长 结构复杂 
-* 理论
+* 分布式架构复杂度 : 系统之间的通信标准不统一 调用链长 系统结构复杂
+* 理论与文章
   * SOA
   * MicroService 
     * [ ] [MicroServices Resource Guide by Martin Fowler](https://martinfowler.com/microservices/)
@@ -123,36 +123,56 @@
 	* [ ] [可扩展的 Web 架构和分布式系统](http://www.aosabook.org/en/distsys.html) : 可扩展的 Web 架构和分布式系统
 	* [ ] [Principles of Distributed System](https://disco.ethz.ch/courses/podc_allstars/lecture/podc.pdf) : Books 分布式系统中会用到的算法
 	* [ ] [数据密集型应用系统设计](https://book.douban.com/subject/30329536/) : Books
-  * BASE
-  * 分布式事务
-  * 分布式锁
+  * ACID BASE
+  * 分布式事务 
+    * 两段提交
+	* 三段提交
+	* 一致性算法 : Paxos
+    * [ ] [事务补偿](https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction)
+	* 最终一致性
+  * 分布式锁/乐观锁(CAS)
   * 共识/一致性算法 Paxos Raft Zap
     * [ ] [Paxos](http://harry.me/blog/2014/12/27/neat-algorithms-paxos/)
 	* [ ] [RAFT](https://www.infoq.cn/article/raft-paper/)
 	* [ ] [Zap](https://cwiki.apache.org/confluence/display/ZOOKEEPER/Zab+vs.+Paxos) : Zookeeper的一致性协议
 	* [ ] [Vector Clock](https://riak.com/posts/technical/vector-clocks-revisited)
 	* [ ] [Gossip](https://www.cs.cornell.edu/home/rvr/papers/flowgossip.pdf)
+	* [ ] [一致性哈希算法]
   * 分布式数据库
     * [ ] [Spanner](http://static.googleusercontent.com/media/research.google.com/zh-CN//archive/spanner-osdi2012.pdf) : CockroachDB TiDB 的理论依据
 	* [ ] [AWS Aurora](https://www.allthingsdistributed.com/files/p1041-verbitski.pdf) : AWS Aurora
+  * 康威定律
 * 分布式架构设计模式
   * 高性能
-    * 缓存 : (分布式)缓存如何分区和查找 失效/更新(WriteThough)
+    * 缓存 : (分布式)缓存如何分区和查找 失效/更新(WriteThough),分布式服务意味着 单点缓存/分布式缓存 缓存要设置过期时间 预防爬虫
+	  * [ ] [Scaling Memcache at Facebook](https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf) : Cache Aside更新->失效
+	  * Read/Write Though : 更新缓存,同步更新数据库
+	  * Write Back : 更新缓存,异步更新数据库
 	* 负载均衡 : 路由算法 服务发现
-	* 异步调用 : 消息队列 异步事务
-	* 数据镜像(读写分离) : 数据同步 数据一致性
+	* 异步处理 : 消息队列 异步+分布式事务
+	* 数据镜像(读写分离) : 数据同步 数据一致性 [CQRS]
 	* 数据分片(分库分表) : Data Access Layer Proxy
-  * 高可用
-    * 拆分和冗余 : 故障隔离 防止单点故障
-	* 限流降级 : 系统整体可用性
+  * 可用性/一致性(AP)
+    * 隔离设计 : 拆分和冗余,隔离故障,防止单点故障. 按照服务隔离(分布式事务) 数据存储隔离(读写分离 数据分区)	
+    * 通信隔离 : 消息队列(事件驱动设计) 通过消息队列中间件方式环节服务依赖问题
+	* 幂等性 : 全局ID+去重表
+	* 服务状态 : 无状态服务(分布式数据存储支持) 有状态服务(通过长连接/基于session的负载均衡)让服务请求负载到同一个实例
+	* 补偿事务 : Try Commit / Rollback
+	* 重试机制 : 重试策略 考虑幂等性
+	* 熔断 : Close -> Open -> Half-Close 失败一定次数直接返回(调用代理 API Gateway)
+	* 限流 : 队列 [漏斗算法](https://en.wikipedia.org/wiki/Leaky_bucket) 令牌桶算法 基于系统响应时间动态限流
+	* 降级 : 服务降级(停止不重要的服务) 数据一致性降级(强一致性->最终一致性)
 	* 多中心
   * 可扩展
+    * 配置中心
+	* Service Mesh / SideCar : [Service Mesh](https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/)
+	* Gateway
   * 安全性 : 接入安全 数据安全 传输安全
 * 分布式架构工程与实践
   * 监控和管理 : 监控与预警(硬件性能监控 中间件指标监控 服务调用监控) 资源地图(跨系统调用链,业务出现问题 可以找到问题链路) zipkin ELK skywalking
   * 分布式服务 : 服务治理(服务依赖 服务发现 服务生命周期 服务路由) zookeeper dubbo docker k8s
   * 分布式数据 : 1.分布式事务/数据镜像导致数据一致性问题 Paxos(数据层) 两/三段提交(应用层) 最终一致性 2.数据调度(数据分片) 数据分片中间件/业务层分片
-  * 流量控制 : 降级/熔断 服务保护 API Gateway
+  * 流量控制 : 降级/限流/熔断 服务保护 API Gateway
   * 运维 : DevOps
 * 系统故障
   * 定位 : 重点不在于debug 而是在于快速系统可用(必要时降级)
@@ -173,7 +193,8 @@
 * Actor : orleans akka
 * netty
 * nginx
-* 分布式 :dubbo zipkin zookeeper skywalking Zuul
+* 分布式 :dubbo zipkin zookeeper skywalking Zuul Service Mesh Consul
+* 容错系统 [Hystrix] https://github.com/Netflix/Hystrix
 
 ## 编程语言
 
