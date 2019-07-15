@@ -25,7 +25,13 @@
   * 整数 : 原码 反码 补码(为什么需要补码?加法器实现减法)
   * 浮点数 : IEEE 754
   * 字符 : ASCII Unicode(UTF-8 UTF-16 UTF-32)
-* CPU ：指令流水线执行 ,SMP NUMA MPP ,缓存(WriteThought 一致性)
+* CPU ：
+  * 指令流水线执行
+  * SMP NUMA MPP
+    * [NUMA架构的CPU -- 你真的用好了么？](http://cenalulu.github.io/linux/numa/)
+  * 缓存
+    * WriteThought/WriteBack
+    * 一致性 : [关于volatile、MESI、内存屏障、Lock](https://www.jianshu.com/p/6745203ae1fe)
 * 存储器 : 分层  物理内存(虚拟内存) 硬盘
 * 网络 : 网络分层 ,网络协议 ,TCP/IP ,HTTP (RFC)
 
@@ -185,8 +191,15 @@
 * reactive : rx.net
 * netty : dotnetty
 * nginx
-* 分布式 : dubbo ,zipkin ,zookeeper ,skywalking ,Zuul ,Service Mesh ,Consul
-* 容错系统 [Hystrix](https://github.com/Netflix/Hystrix)
+* dubbo
+* zipkin
+* zookeeper
+* skywalking
+* Zuul
+* Service Mesh
+* Consul
+* [Hystrix](https://github.com/Netflix/Hystrix) : 容错系统
+* [高性能队列——Disruptor](https://tech.meituan.com/2016/11/18/disruptor.html)
 
 ## 编程范式
 
