@@ -130,7 +130,7 @@
   * 共识/一致性算法 Paxos Raft Zap
     * [Paxos](http://harry.me/blog/2014/12/27/neat-algorithms-paxos/)
     * [RAFT](https://www.infoq.cn/article/raft-paper/)
-    * [Zap](https://cwiki.apache.org/confluence/display/ZOOKEEPER/Zab+vs.+Paxos) : Zookeeper的一致性协议
+    * [Zap](https://cwiki.apache.org/confluence/display/ZOOKEEPER/Zab+vs.+Paxos) : Zookeeper的一致性协议 [Paper](https://www.semanticscholar.org/paper/Zab%3A-High-performance-broadcast-for-primary-backup-Junqueira-Reed/b02c6b00bd5dbdbd951fddb00b906c82fa80f0b3)
     * [Vector Clock](https://riak.com/posts/technical/vector-clocks-revisited)
     * [Gossip](https://www.cs.cornell.edu/home/rvr/papers/flowgossip.pdf)
   * [一致性哈希算法](https://www.akamai.com/us/en/multimedia/documents/technical-publication/consistent-hashing-and-random-trees-distributed-caching-protocols-for-relieving-hot-spots-on-the-world-wide-web-technical-publication.pdf)
