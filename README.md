@@ -215,6 +215,7 @@
 
 ### 编程思想推荐阅读
 
+* [泛型编程](http://stepanovpapers.com/genprog.pdf)
 * [**算法导论**](https://book.douban.com/subject/20432061/)
 * [冒号课堂](https://book.douban.com/subject/4031906/)
 
