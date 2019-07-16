@@ -201,20 +201,22 @@
 * [Hystrix](https://github.com/Netflix/Hystrix) : 容错系统
 * [高性能队列——Disruptor](https://tech.meituan.com/2016/11/18/disruptor.html)
 
-## 编程范式
+## 编程思想
 
 * 算法
 * 数据结构 : 线程安全 & LockFree 数据结构
 * 面向对象
   * [A Theory of Objects](https://book.douban.com/subject/1761931/)
 * 面向过程
+* 函数式编程
 * 异步 : APM TAP EAP Promise Observer
 * Actor
 * Reactive
 
-### 编程范式推荐阅读
+### 编程思想推荐阅读
 
 * [**算法导论**](https://book.douban.com/subject/20432061/)
+* [冒号课堂](https://book.douban.com/subject/4031906/)
 
 ## 编程语言
 
