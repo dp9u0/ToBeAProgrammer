@@ -103,28 +103,6 @@
   * [Understanding Reactor Pattern: Thread-Based and Event-Driven](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve) 
   * [The Design and Implementation of the Reactor](https://www.dre.vanderbilt.edu/~schmidt/PDF/Reactor2-93.pdf) 
   * [The reactor pattern and non-blocking IO](https://www.celum.com/en/blog/technology/the-reactor-pattern-and-non-blocking-io)
-  
-## 编译原理
-
-### 编译原理推荐阅读
-
-* [计算机程序的构造和解释](https://book.douban.com/subject/1148282/)
-* [编译原理](https://book.douban.com/subject/3296317/)
-
-## 数据存储
-
-* sql
-* nosql
-* 分布式文件系统
-
-### 数据存储推荐阅读
-
-* [SQL Server2012实施与管理实战指南](https://book.douban.com/subject/21823753/)
-* [数据库系统概念](https://book.douban.com/subject/10548379/)
-* [高性能MySQL](https://book.douban.com/subject/23008813/)
-* [MySQL技术内幕](https://book.douban.com/subject/24708143/)
-* [MySQL Internals Manual](https://dev.mysql.com/doc/internals/en/)
-* [NoSQL精粹](https://book.douban.com/subject/25662138/)
 
 ## 系统架构
 
@@ -239,26 +217,6 @@
 * [分布式系统的事务处理](https://coolshell.cn/articles/10910.html)
 * [日志：每个软件工程师都应该知道的有关实时数据的统一概念](https://github.com/oldratlee/translations/blob/master/log-what-every-software-engineer-should-know-about-real-time-datas-unifying/README.md)
 
-## 框架与应用
-
-* sql : mysql
-* nosql : redis elasticsearch mongodb
-* mq : kafka
-* actor : orleans akka
-* reactive : rx.net
-* io : netty dotnetty
-* nginx
-* dubbo
-* zipkin
-* zookeeper
-* skywalking
-* Zuul
-* Service Mesh
-* Consul
-* [Hystrix](https://github.com/Netflix/Hystrix) : 容错系统
-* [Disruptor](https://tech.meituan.com/2016/11/18/disruptor.html)
-* [swagger](https://swagger.io/)
-
 ## 软件设计
 
 ### 编程思想
@@ -322,6 +280,13 @@
 * [**算法导论**](https://book.douban.com/subject/20432061/)
 * [冒号课堂](https://book.douban.com/subject/4031906/)
 * [The Twelve-Factor App](https://12factor.net/) : [ZH-CN](https://12factor.net/zh_cn/)
+ 
+## 编译原理
+
+### 编译原理推荐阅读
+
+* [计算机程序的构造和解释](https://book.douban.com/subject/1148282/)
+* [编译原理](https://book.douban.com/subject/3296317/)
 
 ## 编程语言
 
@@ -370,6 +335,40 @@
 * [Linux kernel coding style](https://www.kernel.org/doc/html/latest/process/coding-style.html)
 * [C++ Coding Style](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 * [Shell](https://google.github.io/styleguide/shell.xml)
+## 框架与应用
+
+* sql : mysql
+* nosql : redis elasticsearch mongodb
+* mq : kafka
+* actor : orleans akka
+* reactive : rx.net
+* io : netty dotnetty
+* nginx
+* dubbo
+* zipkin
+* zookeeper
+* skywalking
+* Zuul
+* Service Mesh
+* Consul
+* [Hystrix](https://github.com/Netflix/Hystrix) : 容错系统
+* [Disruptor](https://tech.meituan.com/2016/11/18/disruptor.html)
+* [swagger](https://swagger.io/)
+
+## 数据存储
+
+* sql
+* nosql
+* 分布式文件系统
+
+### 数据存储推荐阅读
+
+* [SQL Server2012实施与管理实战指南](https://book.douban.com/subject/21823753/)
+* [数据库系统概念](https://book.douban.com/subject/10548379/)
+* [高性能MySQL](https://book.douban.com/subject/23008813/)
+* [MySQL技术内幕](https://book.douban.com/subject/24708143/)
+* [MySQL Internals Manual](https://dev.mysql.com/doc/internals/en/)
+* [NoSQL精粹](https://book.douban.com/subject/25662138/)
 
 ## 工具类
 
