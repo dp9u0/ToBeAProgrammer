@@ -1,15 +1,5 @@
 # To Be A Programmer
 
-## 文献图标
-
-![doc.paper](https://img.shields.io/badge/doc-paper-red.svg)
-
-![doc.paper](https://img.shields.io/badge/doc-paper-red.svg)
-
-![doc.paper](https://img.shields.io/badge/doc-paper-red.svg)
-
-![doc.paper](https://img.shields.io/badge/doc-paper-red.svg)
-
 ## Teach Yourself Programming in Ten Years
 
 [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html) [翻译](https://liuyandong.com/2017/10/25/122/)
