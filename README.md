@@ -28,11 +28,15 @@
   * 浮点数 : IEEE 754
   * 字符 : ASCII Unicode(UTF-8 UTF-16 UTF-32)
 * CPU ：
+  * [**我是一个CPU：这个世界慢！死！了！**](https://blog.51cto.com/13188467/2065321)
+  * [硬件性能对比](https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html)
   * 指令流水线执行
+    * 分支预测导致执行性能问题 : [stackoverflow](https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array) : blogs,分支预测错误惩罚严重影响程序性能
     * [Memory Barrier](https://irl.cs.ucla.edu/~yingdi/web/paperreading/whymb.2010.06.07c.pdf) : Paper
   * SMP NUMA MPP
     * [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access) : Wiki
 * 缓存
+  * [Why do CPUs have multiple cache levels?](https://fgiesen.wordpress.com/2016/08/07/why-do-cpus-have-multiple-cache-levels/)
   * Write Thought/Write Back
   * 缓存/内存访问一致性问题 : volatile,MESI,#Lock
   * [A Tutorial Introduction to the ARM and POWER Relaxed Memory Models](https://www.cl.cam.ac.uk/~pes20/ppc-supplemental/test7.pdf) : Paper, ARM 和 POWER 体系结构下多处理器系统内存并发访问一致性的设计思路和使用方法
@@ -298,6 +302,8 @@
 * [Introduction to Java Bytecode](https://dzone.com/articles/introduction-to-java-bytecode) : blog
 * [Byte Buddy](http://bytebuddy.net/#/) : docs
 * [Java Bytecode and JVMTI Examples](https://github.com/jon-bell/bytecode-examples) : docs
+* [Java 双检锁问题](http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html)
+* [Synchronization and the Java Memory Model](http://gee.cs.oswego.edu/dl/cpj/jmm.html)
 
 ### .NET
 
